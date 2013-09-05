@@ -28,12 +28,23 @@ class ExampleTestCase(unittest.TestCase):
     #     elem.send_keys(Keys.RETURN)
     #     self.assertIn("Google", self.driver.title)
 
-    def test_example2(self):
-        self.driver.get("http://www.google.com")
-        # self.assertEqual(self.driver.title, "Google")
-        elem = self.driver.find_element_by_name("q")
+    def test_homepage(self):
+        self.driver.get("http://www.facebook.com")
+        time.sleep(2)
+        self.assertIn("Facebook", self.driver.title)
+        self.driver.get("http://www.facebook.com/wowprice")
+        time.sleep(2)
+        self.assertIn("Wowprice", self.driver.title)
 
-        elem.send_keys("robustest")
+
+    def test_homepage_fail(self):
+        self.driver.get("http://www.facebook.com")
+        time.sleep(2)
+        self.driver.get("http://www.facebook.com")
+        time.sleep(2)
+        self.driver.get("http://www.facebook.com")
+        time.sleep(2)
+        self.driver.get("http://www.facebook.com")
         time.sleep(2)
         elem = self.driver.find_element_by_name("btnG")
         elem.click()
