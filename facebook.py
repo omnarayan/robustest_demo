@@ -2,11 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 import unittest
+
 import sys
 import time
 
 
-class ExampleTestCase(unittest.TestCase):
+class FacebookTestCase(unittest.TestCase):
     desired_capabilities = {
                         "browserName": "firefox",
                         "appID" : "appID",
@@ -17,7 +18,7 @@ class ExampleTestCase(unittest.TestCase):
 
                         }
     def setUp(self):
-        self.driver = webdriver.Remote(desired_capabilities=ExampleTestCase.desired_capabilities)
+        self.driver = webdriver.Remote(desired_capabilities=FacebookTestCase.desired_capabilities)
 
     # def test_example1(self):
     #     self.driver.get("http://www.google.com")
