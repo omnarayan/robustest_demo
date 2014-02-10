@@ -6,7 +6,7 @@ import sys
 import time
 
 
-class ExampleTestCase(unittest.TestCase):
+class GoogleTestCase(unittest.TestCase):
     desired_capabilities = {
                         "browserName": "firefox",
                         "appID" : "appID",
@@ -17,7 +17,7 @@ class ExampleTestCase(unittest.TestCase):
 
                         }
     def setUp(self):
-        self.driver = webdriver.Remote(desired_capabilities=ExampleTestCase.desired_capabilities)
+        self.driver = webdriver.Remote(desired_capabilities=GoogleTestCase.desired_capabilities)
 
     # def test_example1(self):
     #     self.driver.get("http://www.google.com")
