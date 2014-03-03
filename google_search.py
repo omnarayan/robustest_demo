@@ -12,7 +12,7 @@ class GoogleTestCase(unittest.TestCase):
                         "appID" : "appID",
                         "version": "23",
                         "platform":"LINUX",
-                        "hubUrl" : "http://127.0.0.1:6444/wd/hub",
+                        "hubUrl" : "http://ommm:NZq6R6BLgVf93iGt7SPe@hub.browserstack.com:80/wd/hub",
                         # "hubUrl" : "http://ec2-54-213-199-4.us-west-2.compute.amazonaws.com:4444/wd/hub",
 
                         }
